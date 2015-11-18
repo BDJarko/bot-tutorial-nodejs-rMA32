@@ -72,7 +72,7 @@ function respond() {
   } 
   else if(request.text && botRegexWk.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/mhh/forum/topic/28916");
+    postMessage("http://daddyleagues.com/mhh/rules6");
     this.res.end();
   } 
   else if(request.text && botODB.test(request.text)) {
