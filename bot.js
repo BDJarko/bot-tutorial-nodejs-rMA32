@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/MHH Bot/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
-      botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i;
+      botRegexRu = /^\/rules/; botRegexYu = /^\/youtube/i; botRegexSd = /^\/schedule;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -94,7 +94,11 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://www.youtube.com/results?lclk=channel&filters=channel&search_query="+request.text.substring(9,request.text.length));
     this.res.end();
-  
+  }
+  else if(request.text && botRegexSd.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://www.daddyleagues.com/mhh/schedule"+request.text.substring(9,request.text.length));
+    this.res.end();
   }
   else {
     console.log("don't care");
