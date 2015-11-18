@@ -97,7 +97,7 @@ function respond() {
   }
   else if(request.text && botRegexSd.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.daddyleagues.com/mhh/schedule"+request.text.substring(9,request.text.length));
+    postMessage("https://www.daddyleagues.com/mhh/schedule");
     this.res.end();
   }
   else {
