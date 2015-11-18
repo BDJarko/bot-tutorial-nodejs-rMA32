@@ -95,7 +95,7 @@ function respond() {
     postMessage("https://www.youtube.com/results?lclk=channel&filters=channel&search_query="+request.text.substring(9,request.text.length));
     this.res.end();
   } 
-  else if(request.text && botRegexRu.test(request.text)) {
+  else if(request.text && botRegexSd.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/mhh/schedule");
     this.res.end();
