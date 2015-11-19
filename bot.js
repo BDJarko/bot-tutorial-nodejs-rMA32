@@ -14,7 +14,7 @@ function respond() {
                 "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(Play your games! The MHH Bot has spoken);
+    postMessage(cool());
     this.res.end();
   } 
   else if(request.text && botRegexDL.test(request.text)) {
