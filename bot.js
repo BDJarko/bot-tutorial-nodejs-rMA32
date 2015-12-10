@@ -102,7 +102,7 @@ function respond() {
   } 
   else if(request.text && botRegexTr.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://www.daddyleagues.com/mhh/forum/forum/5074");
+    postMessage("https://www.daddyleagues.com/mhh/forum/forum/5238");
     this.res.end();
   }
   else {
